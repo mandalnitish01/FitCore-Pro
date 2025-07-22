@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitCore Pro - Intelligent Fitness Solutions</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .redirect-container {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(26, 35, 126, 0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: #1a237e;
+            margin-bottom: 1rem;
+        }
+        .loading-text {
+            color: #757575;
+            margin-bottom: 2rem;
+        }
+        .page-list {
+            display: grid;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .page-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            background: #f5f5f5;
+            color: #1a237e;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 200ms ease-out;
+            font-weight: 600;
+        }
+        .page-link:hover {
+            background: #ff6f00;
+            color: white;
+            transform: translateY(-1px);
+        }
+        .auto-redirect {
+            font-size: 0.875rem;
+            color: #757575;
+            font-style: italic;
+        }
+    </style>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Ffitness171706back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body>
+    <div class="redirect-container">
+        <div class="logo">FitCore Pro</div>
+        <p class="loading-text">Welcome to FitCore Pro - Intelligent Fitness Solutions</p>
+        
+        <div class="page-list">
+            <a href="pages/homepage_premium_fitness_studio.html" class="page-link">Homepage - Premium Fitness Studio</a>
+            <a href="pages/programs_overview_methodology_showcase.html" class="page-link">Programs Overview - Methodology Showcase</a>
+            <a href="pages/individual_program_pages_deep_dive_experience.html" class="page-link">Individual Program Pages - Deep Dive Experience</a>
+            <a href="pages/trainers_directory_expertise_showcase.html" class="page-link">Trainers Directory - Expertise Showcase</a>
+            <a href="pages/schedule_interface_smart_booking_hub.html" class="page-link">Schedule Interface - Smart Booking Hub</a>
+            <a href="pages/trial_booking_conversion_optimized_onboarding.html" class="page-link">Trial Booking - Conversion Optimized Onboarding</a>
+            <a href="pages/membership_pricing_value_communication_hub.html" class="page-link">Membership Pricing - Value Communication Hub</a>
+            <a href="pages/community_portal_member_engagement_hub.html" class="page-link">Community Portal - Member Engagement Hub</a>
+            <a href="pages/resource_library_authority_content_hub.html" class="page-link">Resource Library - Authority Content Hub</a>
+            <a href="pages/contact_support_service_excellence_hub.html" class="page-link">Contact Support - Service Excellence Hub</a>
+        </div>
+        
+        <p class="auto-redirect">Auto-redirecting to homepage in <span id="countdown">5</span> seconds...</p>
+    </div>
+
+    <script>
+        let countdown = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.href = 'pages/homepage_premium_fitness_studio.html';
+            }
+        }, 1000);
+        
+        // Allow manual navigation to override auto-redirect
+        document.querySelectorAll('.page-link').forEach(link => {
+            link.addEventListener('click', () => {
+                clearInterval(timer);
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+</body>
+</html>

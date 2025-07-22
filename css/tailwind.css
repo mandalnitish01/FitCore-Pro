@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #1a237e; /* indigo-900 - Authority and trust foundation */
+  --color-primary-light: #3949ab; /* indigo-600 - Softer expertise moments */
+  
+  /* Accent Colors */
+  --color-accent: #ff6f00; /* orange-600 - Action and energy focus */
+  --color-accent-light: #ffb74d; /* orange-300 */
+  --color-accent-dark: #e65100; /* orange-800 */
+  
+  /* Background Colors */
+  --color-background: #fafafa; /* gray-50 - Clean content canvas */
+  --color-surface: #ffffff; /* white - Card and component depth */
+  
+  /* Text Colors */
+  --color-text-primary: #212121; /* gray-800 - Extended reading comfort */
+  --color-text-secondary: #757575; /* gray-600 - Clear information hierarchy */
+  
+  /* Status Colors */
+  --color-success: #2e7d32; /* green-700 - Progress celebration */
+  --color-warning: #f57c00; /* orange-700 - Helpful urgency */
+  --color-error: #d32f2f; /* red-700 - Constructive concern */
+  
+  /* Border Colors */
+  --color-border: #e0e0e0; /* gray-300 */
+  --color-border-focus: #ff6f00; /* orange-600 */
+  
+  /* Shadow */
+  --shadow-card: 0 4px 12px rgba(26, 35, 126, 0.1);
+}
+
+@layer base {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+  
+  .btn-primary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+  
+  .metric-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+}
+
+@layer components {
+  .card-elevation {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .transition-smooth {
+    transition: all 300ms ease-out;
+  }
+  
+  .transition-quick {
+    transition: all 200ms ease-out;
+  }
+  
+  .transition-page {
+    transition: all 400ms ease-out;
+  }
+}
